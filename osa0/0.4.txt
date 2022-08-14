@@ -1,11 +1,18 @@
+
+note over selain:
+lomakkeen tallennuspainike
+käynnistää HTTP POST -metodin
+end note
+
 selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
-palvelin-->selain: status 302 (uudelleenohjaus)
 
 note over palvelin:
 palvelin vastaa statuskoodilla 302, jonka
 perusteella selain tekee automaattisen
 HTTP GET -pyynnön osoitteeseen "notes"
 end note
+
+palvelin-->selain: status 302 (uudelleenohjaus)
 
 selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 palvelin-->selain: HTML-koodi
