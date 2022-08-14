@@ -1,7 +1,12 @@
-Skevenssikaavio (https://www.websequencediagrams.com/)
-
 selain->palvelin: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
-palvelin->selain: kehotus tehdä GET-kutsu osoitteeseen notes
+palvelin-->selain: status 302 (uudelleenohjaus)
+
+note over palvelin:
+palvelin vastaa statuskoodilla 302, jonka
+perusteella selain tekee automaattisen
+HTTP GET -pyynnön osoitteeseen "notes"
+end note
+
 selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 palvelin-->selain: HTML-koodi
 selain->palvelin: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
